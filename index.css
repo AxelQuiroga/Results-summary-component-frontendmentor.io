@@ -1,0 +1,255 @@
+@font-face {
+    font-family:"HankenGrotesk" ;
+    src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+    font-weight: 500 800;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0000-00FF;
+    font-variant: small-caps;
+    font-display: swap;
+}
+
+:root {
+  --light-red-20: hsla(0, 100%, 67%, 0.096);
+  --light-red-: hsl(0, 100%, 67%);
+  --orangey-yellow-20: hsla(39, 100%, 56%, 0.096);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal-20: hsla(166, 100%, 37%, 0.096);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue-20: hsla(234, 85%, 45%, 0.096);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+*{
+margin: 0;    
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    font-family: "HankenGrotesk";
+    padding: 60px 15px;
+    background-color: var(--pale-blue);
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+li{
+    list-style: none;
+}
+.card{
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--white);
+    border-radius: 40px 40px 35px 35px;
+    padding-bottom: 30px;
+}
+
+.cardScoreSection{
+padding: 30px 0;
+background: linear-gradient(var(--light-slate-blue),var(--light-royal-blue));
+border-radius: 35px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color:var(--white);
+gap: 35px;
+}
+
+.cardScoreSection{
+    font-weight: 400px;
+    font-size: 1.4rem;
+    color: var(--pale-blue);
+}
+
+.cardScoreStat{
+
+height: 120px;
+width: 120px;
+border-radius: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: linear-gradient(var(--violet-blue),var(--persian-blue));
+}
+
+.cardScoreStat strong{
+    font-size: 3rem;
+}
+
+.cardScoreStat span{
+    color: var(--light-lavender);
+    opacity: 0.8;
+}
+
+.cardScoreDescription{
+    width: 70%;
+}
+
+.cardScoreDescription p:nth-child(1) {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.cardScoreDescription p:nth-child(2) {
+    color: var(--light-lavender);
+    white-space: normal;
+font-weight: 500;
+font-size: 1.1rem;
+
+}
+
+.cardSummarySection{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.cardSummarySection h2 {
+    color: var(--dark-gray-blue);
+}
+
+.summaryList{
+display: flex;
+flex-direction: column;
+gap: 30px;
+padding-left: 0;
+}
+
+.summaryItem {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+.summaryItem .category{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.summaryReaction {
+background-color: var(--light-red-20);
+}
+
+.summaryMemory{
+    background-color: var(--orangey-yellow-20);
+}
+
+.summaryVerbal{
+    background-color: var(--green-teal-20);
+}
+
+.summaryVisual{
+    background-color: var(--cobalt-blue-20);
+}
+
+.categoryReaction{
+    color: var(--light-red-);
+}
+
+.categoryMemory{
+    color: var(--orangey-yellow);
+}
+
+.categoryVerbal{
+    color: var(--green-teal);
+}
+
+.categoryVisual{
+    color: var(--cobalt-blue);
+}
+
+.score span:nth-child(1){
+    color: var(--dark-gray-blue);
+    font-weight: 800;
+}
+
+.score span:nth-child(2),
+.score span:nth-child(3){
+    color: var(--dark-gray-blue);
+        opacity: 0.6;
+    font-weight: 800;
+
+}
+
+.continueButton{
+    border:none;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    font-weight: 700;
+    padding: 15px 0;
+    border-radius: 35px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.continueButton:hover{
+    cursor: pointer;
+    background: linear-gradient(var(--light-slate-blue),var(--light-royal-blue));
+
+}
+
+@media (min-width:800px){
+    .card{
+       display: flex;
+       max-width: 800px;
+       padding-bottom: 40px 35px 35px 40px; 
+    }
+    .cardScoreSection{
+        width: 50%;
+    }
+
+    .cardScoreSection h3{
+        font-size: 2rem;
+    }
+
+    .cardScoreStat{
+        border:1px solid;
+        width: 200px;
+        height: 200px;
+    }
+
+    .cardScoreDescription p:nth-child(1){
+        font-size: 2rem;
+        margin-bottom: 20px;
+
+    }
+
+    .cardScoreDescription p:nth-child(2){
+        font-size: 1.2rem;
+        
+    }
+
+    .cardSummarySection{
+        width:50%;
+        padding: 30px;
+
+    }
+    .continueButton{
+        width: 100%;
+        padding: 17px 0;
+    }
+}
